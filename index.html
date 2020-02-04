@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/8bee116590.js" crossorigin="anonymous"></script>
+
+  <title>Weather Data</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card search-section">
+          <div class="card-body">
+            <label>Search For a City:</label>
+            <div class="input-group mb-3">
+              <input id="city-search" type="text" class="form-control" placeholder="Enter City Name">
+              <div class="input-group-append">
+                <button id="getWeather" class="btn btn-success" type="submit">
+                  <i id="getWeatherIcon" class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <!-- past cities here -->
+            <div id="#old-search"></div>
+            <input id="city-hist1" type="text" class="form-control hist1" placeholder="" display: none>
+            <input id="city-hist2" type="text" class="form-control hist2" placeholder="" display: none>
+            <input id="city-hist3" type="text" class="form-control hist3" placeholder="" display: none>
+            <input id="city-hist4" type="text" class="form-control hist4" placeholder="" display: none>
+            <input id="city-hist5" type="text" class="form-control hist5" placeholder="" display: none>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 ">
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" id="cityName">City</h5>
+              <ul>
+                <li><img id="curWeathIcn"></img></li>
+                <li class="card-text" id="curTemp">Temp:</li>
+                <li class="card-text" id="curHum">Humidity:</li>
+                <li class="card-text" id="curWind">Windspeed:</li>
+                <li class="card-text" id="curUv">UV Index:</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h2 class="card-title">5-Day Forcast</h2>
+        </div>
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" id="cityName1">City</h5>
+              <ul>
+                <li><img id="curWeathIcn"></img></li>
+                <li class="card-text" id="curTemp1">Temp:</li>
+                <li class="card-text" id="curHum1">Humidity:</li>
+                <li class="card-text" id="curWind1">Windspeed:</li>
+                <li class="card-text" id="curUv1">UV Index:</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" id="cityName2">City</h5>
+              <ul>
+                <li><img id="curWeathIcn2"></img></li>
+                <li class="card-text" id="curTemp2">Temp:</li>
+                <li class="card-text" id="curHum2">Humidity:</li>
+                <li class="card-text" id="curWind2">Windspeed:</li>
+                <li class="card-text" id="curUv2">UV Index:</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" id="cityName3">City</h5>
+              <ul>
+                <li><img id="curWeathIcn3"></img></li>
+                <li class="card-text" id="curTemp3">Temp:</li>
+                <li class="card-text" id="curHum3">Humidity:</li>
+                <li class="card-text" id="curWind3">Windspeed:</li>
+                <li class="card-text" id="curUv3">UV Index:</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" id="cityName4">City</h5>
+              <ul>
+                <li><img id="curWeathIcn4"></img></li>
+                <li class="card-text" id="curTemp4">Temp:</li>
+                <li class="card-text" id="curHum4">Humidity:</li>
+                <li class="card-text" id="curWind4">Windspeed:</li>
+                <li class="card-text" id="curUv4">UV Index:</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" id="cityName5">City</h5>
+              <ul>
+                <li><img id="curWeathIcn5"></img></li>
+                <li class="card-text" id="curTemp5">Temp:</li>
+                <li class="card-text" id="curHum5">Humidity:</li>
+                <li class="card-text" id="curWind5">Windspeed:</li>
+                <li class="card-text" id="curUv5">UV Index:</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="forecast"></div>
+    </div>
+  </div>
+  <!-- Retrieved data will be dumped here -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
