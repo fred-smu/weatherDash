@@ -6,19 +6,20 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/8bee116590.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="style.css">
+  
 
   <title>Weather Data</title>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <div class="card search-section">
           <div class="card-body">
             <label>Search For a City:</label>
-            <div class="input-group mb-3">
+            <div class="input-group mb-2">
               <input id="city-search" type="text" class="form-control" placeholder="Enter City Name">
               <div class="input-group-append">
                 <button id="getWeather" class="btn btn-success" type="submit">
@@ -27,11 +28,15 @@
               </div>
             </div>
             <!-- past cities here -->
-            <div id="old-search"></div>
+            <div id="old-search">
+              <ul id ="cityList">
+
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-9 ">
+      <div class="col-md-10 ">
         <div class="row">
           <div class="card">
             <div class="card-body">
@@ -41,6 +46,7 @@
                 <li class="card-text" id="curTemp0">Temp:</li>
                 <li class="card-text" id="curHum0">Humidity:</li>
                 <li class="card-text" id="curWind0">Windspeed:</li>
+                <li class="card-text violet" id="curUv0" >UV Index:</li>
               </ul>
             </div>
           </div>
@@ -57,6 +63,7 @@
                 <li class="card-text" id="curTemp1">Temp:</li>
                 <li class="card-text" id="curHum1">Humidity:</li>
                 <li class="card-text" id="curWind1">Windspeed:</li>
+                <li class="card-text violet" id="curUv1" >UV Index:</li>
               </ul>
             </div>
           </div>
@@ -68,6 +75,7 @@
                 <li class="card-text" id="curTemp2">Temp:</li>
                 <li class="card-text" id="curHum2">Humidity:</li>
                 <li class="card-text" id="curWind2">Windspeed:</li>
+                <li class="card-text violet" id="curUv2" >UV Index:</li>
               </ul>
             </div>
           </div>
@@ -79,6 +87,7 @@
                 <li class="card-text" id="curTemp3">Temp:</li>
                 <li class="card-text" id="curHum3">Humidity:</li>
                 <li class="card-text" id="curWind3">Windspeed:</li>
+                <li class="card-text violet" id="curUv3" >UV Index:</li>
               </ul>
             </div>
           </div>
@@ -90,6 +99,7 @@
                 <li class="card-text" id="curTemp4">Temp:</li>
                 <li class="card-text" id="curHum4">Humidity:</li>
                 <li class="card-text" id="curWind4">Windspeed:</li>
+                <li class="card-text violet" id="curUv4" >UV Index:</li>
               </ul>
             </div>
           </div>
@@ -101,6 +111,7 @@
                 <li class="card-text" id="curTemp5">Temp:</li>
                 <li class="card-text" id="curHum5">Humidity:</li>
                 <li class="card-text" id="curWind5">Windspeed:</li>
+                <li class="card-text violet" id="curUv5" >UV Index:</li>
               </ul>
             </div>
           </div>
@@ -112,6 +123,8 @@
   <!-- Retrieved data will be dumped here -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/8bee116590.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="script.js"></script>
 
 </body>
