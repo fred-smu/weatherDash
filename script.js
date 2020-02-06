@@ -45,7 +45,7 @@ $(document).on("click", ".cityhist", function() {
 
 function apiCall() {
   var APIKey = "166a433c57516f51dfab1f7edaed8413";
-  var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityIn +
+  var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityIn +
     "&appid=" + APIKey + "&units=imperial"
  // var queryURL = "api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=xml&units=metric&cnt=7&appid=" + APIKey;
   // Here we run our AJAX call to the OpenWeatherMap API
@@ -68,7 +68,7 @@ function apiCall() {
         myday = utc.slice(8,2);
         $("#cityName" + i).text(response.city.name +" "+mydate );
       
-        $("#curWeathIcn"+ i).attr("src", `http://openweathermap.org/img/w/${cur.weather[0].icon}.png`);
+        $("#curWeathIcn"+ i).attr("src", `https://openweathermap.org/img/w/${cur.weather[0].icon}.png`);
         $("#curTemp" + i).text("Temp: " + cur.main.temp);
         $("#curHum" + i).text("Humidity: " + cur.main.humidity + "%");
         $("#curWind" + i).text("Windspeed: " + cur.wind.speed + " MPH");
@@ -82,7 +82,7 @@ function apiCall() {
 
 function uvApiCall(lat,lon) {
   var APIKey = "166a433c57516f51dfab1f7edaed8413";
-  var queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?lat=37.75&lon=-122.37&appid=" + APIKey;
+  var queryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=37.75&lon=-122.37&appid=" + APIKey;
  // Here we run our AJAX call to the OpenWeatherMap API
   $.ajax({
     url: queryURL,
